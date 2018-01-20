@@ -10,6 +10,6 @@ find_package(Boost 1.66.0 COMPONENTS regex)
 
 include_directories(${Boost_INCLUDE_DIRS})
 
-add_executable(CGen main.hpp main.cpp CTMLParser.hpp CTMLParser.cpp CTMLManager.hpp CTMLManager.cpp FileReader.hpp FileReader.cpp FileSystem.hpp FileSystem.cpp)
+add_executable(CGen Main.hpp Main.cpp CTMLParser.hpp CTMLParser.cpp CTMLManager.hpp CTMLManager.cpp FileReader.hpp FileReader.cpp FileSystem.hpp FileSystem.cpp)
 
 target_link_libraries(CGen ${Boost_LIBRARIES})
