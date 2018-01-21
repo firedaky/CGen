@@ -3,34 +3,57 @@
 #include <iostream>
 #include <vector>
 
-// Platform dependent
-#include <windows.h>
+#include <boost/algorithm/string/predicate.hpp>
+
+#include "FileSystem.hpp"
+#include "FileReader.hpp"
+
+#include "CTMLParser.hpp"
+
 
 CTMLManager::CTMLManager(const std::string& folder)
 {
+    // 1. read folder content
+    std::vector<std::string> ctmlFiles;
 
-    std::vector<std::string> v;
+    ListFilesInDirectory(folder, ctmlFiles);
 
-    std::string pattern(folder);
-    pattern.append("\\*");
-    WIN32_FIND_DATA data;
-    HANDLE hFind;
-
-    if ((hFind = FindFirstFile(pattern.c_str(), &data)) != INVALID_HANDLE_VALUE)
+    // filter non-ctml files
+    for (int fileCnt = static_cast<int>(ctmlFiles.size()) - 1; fileCnt >= 0; fileCnt--)
     {
-        do
+        if (!boost::algorithm::ends_with(ctmlFiles.at(fileCnt), ".ctml"))
         {
-            v.push_back(data.cFileName);
+            ctmlFiles.erase(ctmlFiles.begin() + fileCnt);
         }
-        while (FindNextFile(hFind, &data) != 0);
+    }
 
-        FindClose(hFind);
+    std::vector<std::vector<std::string>> fileContents(ctmlFiles.size());
+
+    // read files
+    for (size_t ctmlFileCnt = 0; ctmlFileCnt < ctmlFiles.size(); ctmlFileCnt++)
+    {
+        FileReader fr(folder + ctmlFiles.at(ctmlFileCnt));
+
+        fr.read(fileContents.at(ctmlFileCnt));
     }
 
 
-    for (const auto& foStr : v)
+    CTMLGraph ctmlGraph;
+    CTMLParser parser(ctmlGraph);
+
+    for (size_t fileCnt = 0; fileCnt < fileContents.size(); fileCnt++)
     {
-        std::cout << foStr << std::endl;
+        const auto& curFile = fileContents.at(fileCnt);
+
+        for (size_t lineCnt = 0; fileCnt < fileContents.size(); fileCnt++)
+        {
+            const auto& curLine = curFile.at(fileCnt);
+
+            std::string message;
+
+            parser.parseLine(curLine, message);
+
+        }
     }
 }
 

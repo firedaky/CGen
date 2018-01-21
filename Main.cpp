@@ -14,8 +14,6 @@ int main()
 
     CTMLManager manager(ctmlFolder);
 
-
-
     system("pause");
     return 0;
 }
