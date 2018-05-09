@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>UniTheater Karlsruhe</title>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <style>
+
+      body {
+      	padding-top: 50px;
+      }
+        
+      .no-round-corner {
+          border-radius: 0px;
+      }
+
+      .centrized-heading {
+      	text-align:center;
+      }
+
+    </style>
+  </head>
+
+  <body>
+
+    <CGenTemplates name = "navbarTop" /> 
+
+    <CGenTemplates name = "carousel" /> 
+
+    <CGenTemplates name = "indexContent" /> 
+      
+
+      <div class="row" id="archiv">
+      	<div class="col-sm-12">
+          <h2 class="centrized-heading">Archiv</h2>
+          <h3>In K&uuml;rze mehr...</h3>
+        </div>
+      </div>
+      
+
+    <CGenTemplates name = "navBottom"/>   
+
+  </body>
+</html>

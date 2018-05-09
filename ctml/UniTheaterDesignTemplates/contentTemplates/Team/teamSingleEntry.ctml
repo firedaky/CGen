@@ -1,0 +1,10 @@
+<div class="col-sm-6">
+  	<div class="thumbnail">
+  		<CGenContent type = "img"/>
+      	<div class="caption">
+        	<p>
+        		<CGenContent type = "text"/>
+        	</p>
+      	</div>
+  	</div>
+</div>

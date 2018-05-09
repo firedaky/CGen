@@ -1,0 +1,41 @@
+<CGenVariable name = "idList" type = "stringList" value = "{cal, id, }" />
+<CGenVariable name = "countingUp" value = "0" type = "int" function = "countUp">
+
+<div class="container">
+	
+	<div class="row"> &nbsp;<br /> &nbsp; </div>
+	
+	<CGenTemplates name = "contentHeader"/>
+	<CGenTemplates name = "calender" />
+	
+	<div class="row"> &nbsp;<br /> &nbsp; </div>
+
+	<CGenTemplates name = "contentHeader">
+	<CGenTemplates name = "currentProjects" multiplicity = "*"/>
+
+	<div class="row"> &nbsp;<br /> &nbsp; </div>
+	
+	<CGenTemplates name = "contentHeader"/>
+	<CGenTemplates name = "aboutUs"/>
+
+	<div class="row"> &nbsp;<br /> &nbsp; </div>
+	
+	<CGenTemplates name = "contentHeader"/>
+	<CGenTemplates name = "aboutUs"/>
+
+	<div class="row"> &nbsp;<br /> &nbsp; </div>
+	
+	<CGenTemplates name = "contentHeader"/>
+	<CGenTemplates name = "team"/>
+
+	<div class="row"> &nbsp;<br /> &nbsp; </div>
+	
+	<CGenTemplates name = "contentHeader"/>
+	<CGenTemplates name = "friends"/>
+
+	<div class="row"> &nbsp;<br /> &nbsp; </div>
+
+	<CGenTemplates name = "contentHeader"/>
+	<CGenTemplates name = "archiv"/>	
+
+</div>

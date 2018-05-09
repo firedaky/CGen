@@ -1,0 +1,22 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <CGenTemplates name = "navContent.navButton"/>        
+      <CGenContent type = "link"/>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <CGenTemplates name = "navContent.navLink"/>  
+        <CGenTemplates name = "navTopDropDown">        
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><CGenContent type = "text" /><span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <CGenTemplates name = "navContent.navLink" multiplicity = "*"/>
+            </ul>
+          </li>
+        </CGenTemplate>
+        <CGenTemplates name = "navContent.navLink" multiplicity = "*"/>
+      </ul>
+    </div>
+  </div>
+</nav>

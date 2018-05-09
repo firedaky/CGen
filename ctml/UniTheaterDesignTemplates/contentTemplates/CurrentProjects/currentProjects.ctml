@@ -1,0 +1,18 @@
+<div class="row" id="<CGenContent type = "text"/>">
+  <div class="col-sm-4">
+    <h3>
+      <CGenContent type = "img">
+    </h3>
+  </div>
+  <div class="col-sm-8">
+    <h3><CGenContent type = "text"></h3>
+    <h4><CGenContent type = "text"></h4>
+    <h4><CGenContent type = "text"></h4>
+    <p><CGenContent type = "text"></p>
+    <p>
+      <CGenContent type = "link">
+    </p>
+  </div>
+</div>
+
+<div class="row"> &nbsp; </div>
