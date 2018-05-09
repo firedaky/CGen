@@ -14,25 +14,16 @@
 CTMLManager::CTMLManager(const std::string& folder)
 {
     // 1. read folder content
-    std::vector<std::string> ctmlFiles;
 
-    ListFilesInDirectory(folder, ctmlFiles);
+    std::vector<std::string> absCtmlFiles;
+    RecursivelyScanCtml(folder, absCtmlFiles);
 
-    // filter non-ctml files
-    for (int fileCnt = static_cast<int>(ctmlFiles.size()) - 1; fileCnt >= 0; fileCnt--)
-    {
-        if (!boost::algorithm::ends_with(ctmlFiles.at(fileCnt), ".ctml"))
-        {
-            ctmlFiles.erase(ctmlFiles.begin() + fileCnt);
-        }
-    }
-
-    std::vector<std::vector<std::string>> fileContents(ctmlFiles.size());
+    std::vector<std::vector<std::string>> fileContents(absCtmlFiles.size());
 
     // read files
-    for (size_t ctmlFileCnt = 0; ctmlFileCnt < ctmlFiles.size(); ctmlFileCnt++)
+    for (size_t ctmlFileCnt = 0; ctmlFileCnt < absCtmlFiles.size(); ctmlFileCnt++)
     {
-        FileReader fr(folder + ctmlFiles.at(ctmlFileCnt));
+        FileReader fr(absCtmlFiles.at(ctmlFileCnt));
 
         fr.read(fileContents.at(ctmlFileCnt));
     }
