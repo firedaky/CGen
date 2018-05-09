@@ -13,7 +13,7 @@ public:
     bool parseLine(
         const std::string& line,
         std::string& message);
-private:
+protected:
     CTMLGraph& m_ctmlGraph;
 
 };
