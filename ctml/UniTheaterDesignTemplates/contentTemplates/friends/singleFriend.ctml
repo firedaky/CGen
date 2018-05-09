@@ -1,0 +1,8 @@
+<div class="col-sm-4">
+    <h3>
+    	<CGenContent type = "text"/>
+    </h3>
+    <p>
+    	<CGenContent type = "text"/>
+    </p>
+</div>

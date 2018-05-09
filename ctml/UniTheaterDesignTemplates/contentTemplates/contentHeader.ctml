@@ -1,0 +1,6 @@
+<div class="row" id="<CGenContent type = "text" />">
+  <div class="col-sm-12">
+    <hr>
+    <CGenContent type = "text">
+  </div>
+</div>
