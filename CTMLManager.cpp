@@ -8,7 +8,7 @@
 #include "FileSystem.hpp"
 #include "FileReader.hpp"
 
-#include "CTMLParser.hpp"
+#include "CTMLCompiler.hpp"
 
 
 CTMLManager::CTMLManager(const std::string& folder)
@@ -30,27 +30,16 @@ CTMLManager::CTMLManager(const std::string& folder)
 
 
     CTMLGraph ctmlGraph;
-    CTMLParser parser(ctmlGraph);
+    CTMLCompiler compiler(ctmlGraph);
 
     for (size_t fileCnt = 0; fileCnt < fileContents.size(); fileCnt++)
     {
         const auto& curFile = fileContents.at(fileCnt);
-        parser.startFile(absCtmlFiles.at(fileCnt));
+        compiler.compileFile(absCtmlFiles.at(fileCnt), fileContents.at(fileCnt));
 
-        for (size_t lineCnt = 0; lineCnt < curFile.size(); lineCnt++)
-        {
-            const auto& curLine = curFile.at(lineCnt);
 
-            std::string message;
-
-            parser.parseLine(curLine, message);
-
-        }
-
-        parser.endFile(absCtmlFiles.at(fileCnt));
     }
 
-    parser.print();
 }
 
 CTMLManager::~CTMLManager()
