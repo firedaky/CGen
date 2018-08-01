@@ -15,5 +15,4 @@ public:
 protected:
     CTMLGraph& m_ctmlGraph;
 
-    std::vector<std::string> m_lineBuffer;
 };

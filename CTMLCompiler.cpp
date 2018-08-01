@@ -1,4 +1,5 @@
 #include "CTMLCompiler.hpp"
+#include "CTMLCore.hpp"
 
 CTMLCompiler::CTMLCompiler(CTMLGraph& graph) :
     m_ctmlGraph(graph)
@@ -7,8 +8,10 @@ CTMLCompiler::CTMLCompiler(CTMLGraph& graph) :
 
 bool CTMLCompiler::compileFile(const std::string& fp, const std::vector<std::string>& fileLines)
 {
-    // Create a core for each file
+    CTMLCore core(fp, fileLines);
 
-    return false;
+    core.run();
+
+    return true;
 }
 

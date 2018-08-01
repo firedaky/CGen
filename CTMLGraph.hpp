@@ -19,12 +19,15 @@ public:
         void setName(const std::string& name);
         const std::string& getName();
 
+        void setInline(const bool& isInline);
+        bool isInline();
+
         bool isValid();
 
     protected:
 
-        bool isInline;
-        std::string name;
+        bool m_IsInline;
+        std::string m_Name;
 
         // Inline Nodes
         std::vector<std::shared_ptr<CTMLNode>> m_Nodes;

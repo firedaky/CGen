@@ -7,27 +7,30 @@
 class CTMLCore
 {
 public:
-    CTMLCore();
-    CTMLCore(const int& startLineIndex, const int& startCharIndex);
+    // Main Constructor
+    CTMLCore(const std::string& filepath, const std::vector<std::string>& fileConent);
     ~CTMLCore();
 
-    void feed(const std::string& line);
-    int invoke();
+    void run();
+    int step();
 
 protected:
+
+    // SubConstructor
+    CTMLCore(int* startLineIndex, int* startCharIndex);
 
     enum State : int
     {
         ERROR = -1,
         WORKING = 0,
-        WAITING = 1,
+        READY = 1,
         RESULT_READY = 2
     };
 
     State m_State;
 
     // extract to language definition
-    const std::string CTMLTemplateString = "CTMLTemplate";
+    const std::string CTMLTemplateString = "CGenTemplates";
     const std::string CTMLContentString = "CGenContent";
     const std::string CTMLAssertString = "CGenAssert"; // wip
 
@@ -46,11 +49,11 @@ protected:
         FINDING_ATTRIBUTE_VALUE = 6
     };
 
-    InternalState m_internalState;
+    InternalState m_InternalState;
 
     // internal counters
-    int m_CurLine;
-    int m_CurChar;
+    int* m_CurLine;
+    int* m_CurCol;
 
 
     // internal buffers
