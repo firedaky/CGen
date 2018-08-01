@@ -18,12 +18,6 @@ int main()
     FileReader l_fr(l_csvPath + l_csv_file);
     std::vector<std::string> l_Lines;
     l_fr.read(l_Lines);
-
-    for (const std::string& line : l_Lines)
-    {
-        printf((line + "\n").c_str());
-    }
-
     // ready with csv
 
 
@@ -34,11 +28,7 @@ int main()
 
     CTMLManager manager(l_ctmlFolder);
 
-    return EXIT_SUCCESS;
-
-    //---------------------------------------------------------------
-
-
     system("pause");
-    return 0;
+
+    return EXIT_SUCCESS;
 }

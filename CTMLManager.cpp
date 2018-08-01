@@ -35,17 +35,22 @@ CTMLManager::CTMLManager(const std::string& folder)
     for (size_t fileCnt = 0; fileCnt < fileContents.size(); fileCnt++)
     {
         const auto& curFile = fileContents.at(fileCnt);
+        parser.startFile(absCtmlFiles.at(fileCnt));
 
-        for (size_t lineCnt = 0; fileCnt < fileContents.size(); fileCnt++)
+        for (size_t lineCnt = 0; lineCnt < curFile.size(); lineCnt++)
         {
-            const auto& curLine = curFile.at(fileCnt);
+            const auto& curLine = curFile.at(lineCnt);
 
             std::string message;
 
             parser.parseLine(curLine, message);
 
         }
+
+        parser.endFile(absCtmlFiles.at(fileCnt));
     }
+
+    parser.print();
 }
 
 CTMLManager::~CTMLManager()
