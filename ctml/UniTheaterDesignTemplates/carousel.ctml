@@ -1,41 +1,42 @@
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <CGenTemplates name = "carouselIndicators" multiplicity = "*">
-
-      <li data-target="#myCarousel" data-slide-to="<CGenContent type="int" />"></li>
-      
-    </CGenTemplates>
-  </ol>
-
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner">
+<CGenTemplate name = "UniTheater::Carousel">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <CGenTemplate name = "CarouselIndicators" multiplicity = "*">
   
-    <CGenTemplates name = "carouselContent" multiplicity = "*">
-      <div class="item active">
-        <CGenContent type = "img"/>
-        <div class="carousel-caption">
-          <h1>
-            <CGenContent type = "text"/>
-          </h1>
-          <p>
-            <CGenContent type = "text"/>
-          </p>
+        <li data-target="#myCarousel" data-slide-to="<CGenContent type="int" />"></li>
+        
+      </CGenTemplate>
+    </ol>
+  
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+    
+      <CGenTemplate name = "CarouselContent" multiplicity = "*">
+        <div class="item active">
+          <CGenContent type = "img"/>
+          <div class="carousel-caption">
+            <h1>
+              <CGenContent type = "text"/>
+            </h1>
+            <p>
+              <CGenContent type = "text"/>
+            </p>
+          </div>
         </div>
-      </div>
-    </CGenTemplates>
-
-  </div>
-
-  <!-- Left and right controls -->
-  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-
-  <a class="right carousel-control" href="#myCarousel" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div> 
-
+      </CGenTemplate>
+  
+    </div>
+  
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+  
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div> 
+</CGenTemplate>

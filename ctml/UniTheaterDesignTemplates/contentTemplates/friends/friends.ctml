@@ -1,5 +1,5 @@
-<div class="row">
-  
-  <CGenTemplates name = "singleFriend" multiplicity = "*"/>
-
-</div>
+<CGenTemplate name="UniTheater::Friends">
+  <div class="row">  
+    <CGenTemplate name = "SingleFriend" multiplicity = "*" />
+  </div>
+</CGenTemplate>

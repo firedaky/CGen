@@ -10,5 +10,6 @@ public:
 
 protected:
 
+    // LUT for bigger projects managing namespaces
 };
 

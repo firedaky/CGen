@@ -1,6 +1,8 @@
-<div class="row" id="<CGenContent type = "text" />">
-  <div class="col-sm-12">
-    <hr>
-    <CGenContent type = "text">
+<CGenTemplate name="UniTheater::ContentHeader">
+  <div class="row" id="<CGenContent type = &quot;text&quot; />">
+    <div class="col-sm-12">
+      <hr>
+      <CGenContent type = "text">
+    </div>
   </div>
-</div>
+</CGenTemplate>

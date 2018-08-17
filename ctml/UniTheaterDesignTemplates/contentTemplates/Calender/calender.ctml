@@ -1,5 +1,0 @@
-<table class="table table-condensed">
-
-  <CGenTemplates name = "calenderContent" multiplicity = "*"/> 
-
-</table>

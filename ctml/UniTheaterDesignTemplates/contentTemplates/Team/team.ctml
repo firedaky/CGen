@@ -1,5 +1,7 @@
-<div class="row">
-	<CGenTemplates name = "teamSingleEntry" multiplicity = "2"/>
-	<!-- new part here: "read more" link -->
-	<CGenContent type = "link"/>
-</div>
+<CGenTemplate name="UniTheater::Team">
+  <div class="row">
+    <CGenTemplate name = "TeamSingleEntry" multiplicity = "2"/>
+    <!-- new part here: "read more" link -->
+    <CGenContent type = "link"/>
+  </div>
+</CGenTemplate>

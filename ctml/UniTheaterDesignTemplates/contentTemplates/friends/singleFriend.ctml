@@ -1,8 +1,10 @@
-<div class="col-sm-4">
+<CGenTemplate name="SingleFriend">
+  <div class="col-sm-4">
     <h3>
-    	<CGenContent type = "text"/>
+      <CGenContent type = "text"/>
     </h3>
     <p>
-    	<CGenContent type = "text"/>
+      <CGenContent type = "text"/>
     </p>
-</div>
+  </div>
+</CGenTemplate>

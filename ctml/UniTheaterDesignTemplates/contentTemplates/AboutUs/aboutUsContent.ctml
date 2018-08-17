@@ -1,7 +1,9 @@
-<div class="col-sm-6">
-	<h3><CGenContent type = "text" /></h3>
-	<p><CGenContent type = "text" /></p>
-	<p>
-	  <CGenContent type = "link" />
-	</p>
-</div>
+<CGenTemplate name="UniTheater::AboutUsContent">
+  <div class="col-sm-6">
+    <h3><CGenContent type = "text" /></h3>
+    <p><CGenContent type = "text" /></p>
+    <p>
+      <CGenContent type = "link" />
+    </p>
+  </div>
+</CGenTemplate>

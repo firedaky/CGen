@@ -1,7 +1,6 @@
-<div class="row" id="about">
-
-  <CGenTemplates name = "aboutUsContent">
-  <CGenTemplates name = "aboutUsContent">
-
-</div>
-
+<CGenTemplate name="UniTheater::AboutUs">
+  <div class="row" id="about">
+    <CGenTemplate name = "AboutUsContent">
+    <CGenTemplate name = "AboutUsContent">
+  </div>
+</CGenTemplate>

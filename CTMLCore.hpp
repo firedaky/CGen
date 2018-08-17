@@ -4,6 +4,8 @@
 
 #include "CTMLGraph.hpp"
 
+// escape &quot; in attributes
+
 class CTMLCore
 {
 public:

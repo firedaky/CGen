@@ -1,13 +1,15 @@
-<CGenTemplates name = "navLink">
-	<li> 
-		<CGenContent type = "link"/>
-	</li>
-</CGenTemplate>
-
-<CGenTemplates name = "navButton">
-	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-		<span class="icon-bar"></span>
-		<span class="icon-bar"></span>
-		<span class="icon-bar"></span>                        
-	</button>
+<CGenTemplate name = "UniTheater::NavContent">
+  <CGenTemplate name = "NavLink">
+    <li> 
+      <CGenContent type = "link"/>
+    </li>
+  </CGenTemplate>
+  
+  <CGenTemplate name = "NavButton">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>                        
+    </button>
+  </CGenTemplate>
 </CGenTemplate>

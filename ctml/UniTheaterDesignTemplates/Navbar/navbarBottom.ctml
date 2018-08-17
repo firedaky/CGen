@@ -1,12 +1,14 @@
-<nav class="navbar navbar-inverse no-round-corner">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <CGenTemplates name = "navContent.navButton"/>   
+<CGenTemplate name = "UniTheater::NavbarBottom" />
+  <nav class="navbar navbar-inverse no-round-corner">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <CGenTemplates name = "NavContent::NavButton"/>   
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <CGenTemplates name = "NavContent::NavLink" multiplicity = "4"/>
+        </ul>
+      </div>
     </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <CGenTemplates name = "navContent.navLink" multiplicity = "4"/>
-      </ul>
-    </div>
-  </div>
-</nav>
+  </nav>
+</CGenTemplate>
